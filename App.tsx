@@ -39,25 +39,25 @@ const activitiesJSON: ActivityItemProps[] = [
     iconName: 'transfer_complete',
     status: 'Transfer Complete',
     amount: '$500',
-    time: '2023-03-24T12:00:00',
+    time: '2024-03-24T12:00:00',
   },
   {
     iconName: 'approving',
     status: 'Approving',
     amount: '$75',
-    time: '2023-03-24T13:00:00',
+    time: '2024-03-24T13:00:00',
   },
   {
     iconName: 'exchanged',
     status: 'You Exchanged',
     amount: '$200',
-    time: '2023-03-24T14:00:00',
+    time: '2024-03-24T14:00:00',
   },
   {
     iconName: 'transfer_complete',
     status: 'Transfer Complete',
     amount: '$350',
-    time: '2023-03-24T15:00:00',
+    time: '2024-03-24T15:00:00',
   },
 ];
 const ActivityItem: React.FC<ActivityItemProps> = ({
@@ -96,7 +96,7 @@ const ActivityItem: React.FC<ActivityItemProps> = ({
         <Text>{amount}</Text>
       </View>
       <Text style={styles.activityTime}>
-        {DateTime.fromISO(time).toLocaleString(DateTime.TIME_SIMPLE)}
+        {DateTime.fromISO(time).toRelative()}
       </Text>
     </View>
   );
